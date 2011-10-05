@@ -1,0 +1,17 @@
+Installation (Ubuntu):
+
+    git clone git://github.com/ajw/dotfiles.git ~/.dotfiles
+
+
+Create symlinks:
+
+    ln -s ~/.dotfiles/bashrc ~/.bashrc
+ 
+Commit changes and push:
+    git add <files>
+    git commit -m "comment"
+    git push
+
+Pull changes:
+    git pull
+   
