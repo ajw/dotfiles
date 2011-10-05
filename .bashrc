@@ -97,11 +97,7 @@ fi
 
 alias h=history
 alias cdv='cd "/mnt/goliath/projlib/Current Projects/Advanced Coding, Encoders and Mobile/Viper"'
-#alias vi='cream'
-alias cr='cream -p --remote-tab-silent' 
-alias vi='gvim' 
+alias vi='vim' 
 alias svndiff="svn diff | grep ^[+-]"
-#PATH=$PATH:/opt/IBM/TeamConcert/scmtools/eclipse
-
 alias ssh='ssh -X'
 export VIPER_IP=172.17.118.60
