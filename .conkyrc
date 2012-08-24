@@ -1,0 +1,30 @@
+ # Conky, a system monitor embedding into the Linux desktop. 
+ #
+ # Compiz may decorate the embedded Conky window. 
+ # To avoid that a shadow is drawn around the Conky information: 
+ # 1. Open the CompizConfig manager (System > Settings > CompizConfig manager). 
+ # 2. Choose Effects > Window decoration
+ # 3. Set the rule to the following: (any) & !(class=Conky). 
+ #    It means: decorate any window but not those with class Conky. 
+ alignment top_left
+ border_width 0
+ default_color Grey
+ default_outline_color white
+ default_shade_color white
+ double_buffer yes
+ draw_borders no
+ draw_graph_borders yes
+ draw_outline no
+ draw_shades no
+ gap_x 320
+ override_utf8_locale
+ own_window yes
+ own_window_transparent yes
+ # This avoids that the Conky background disappears when clicking on the desktop. 
+ own_window_type override
+ text_buffer_size 65536
+ use_xft yes
+ xftfont Courier:size=10
+
+ TEXT
+ ${execpi 120 todo.sh -d ~/.dotfiles/config-conky ls -@home}
