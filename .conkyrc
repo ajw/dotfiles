@@ -27,4 +27,4 @@
  xftfont Courier:size=10
 
  TEXT
- ${execpi 120 todo.sh -d ~/.dotfiles/config-conky ls -@home}
+ ${execpi 120 todo.sh -d ~/.dotfiles/config-conky ls -@home -@lunchtime -@lunch}
