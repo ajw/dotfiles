@@ -103,11 +103,15 @@ alias ssh='ssh -X'
 export VIPER_IP=172.17.118.60
 export JAVA_HOME=/usr/lib/jvm/java-6-sun/
 alias pgrep='pgrep -fl'
-#alias ch='google-chrome &'
-#alias chj='google-chrome hudson-satv.tandbergtv.lan &'
+alias ch='google-chrome &'
+alias chj='google-chrome hudson-satv.tandbergtv.lan &'
 alias  lt="ls -lrt"
 
 #todo.txt
 export TODOTXT_DEFAULT_ACTION=ls
 alias t='todo.sh -d ~/.dotfiles/todo-config'
 alias tl='todo.sh -d ~/.dotfiles/todo-config ls -@home -@lunchtime -@lunch'
+alias td='toodledo'
+alias gcal='google calendar'
+
+PATH="$PATH:/home/eanwwie/.gem/ruby/1.9.1/bin"
