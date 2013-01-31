@@ -115,3 +115,6 @@ alias td='toodledo'
 alias gcal='google calendar'
 
 PATH="$PATH:/home/eanwwie/.gem/ruby/1.9.1/bin"
+
+#For mapping CapsLock to escape
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
