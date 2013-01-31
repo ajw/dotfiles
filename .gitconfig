@@ -1,0 +1,6 @@
+[user]
+	name = Andy Wilde
+	email = wilde.andy@gmail.com
+[alias]
+    st = status
+    ci = commit
