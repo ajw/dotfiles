@@ -1,4 +1,4 @@
-#i ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -37,6 +37,7 @@ xterm*|rxvt*)
     ;;
 esac
 
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -69,42 +70,14 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
-# If PS1 is not set at all, this is not an interactive
-# shell and we should not mess with it.
-if [ -n "$PS1" ]; then
-    # A temporary variable to contain our prompt command
-    NEW_PROMPT_COMMAND='
-        TRIMMED_PWD=${PWD: -40};
-        TRIMMED_PWD=${TRIMMED_PWD:-$PWD}
-    '
-
-    # If there's an existing prompt command, let's not 
-    # clobber it
-    if [ -n "$PROMPT_COMMAND" ]; then
-        PROMPT_COMMAND="$PROMPT_COMMAND;$NEW_PROMPT_COMMAND"
-    else
-        PROMPT_COMMAND="$NEW_PROMPT_COMMAND"
-    fi
-
-    # We're done with our temporary variable
-    unset NEW_PROMPT_COMMAND
-
-    # Set PS1 with our new variable
-    # \h - hostname, \u - username
-    PS1='\u@\h:$TRIMMED_PWD\$ '
-fi
+PROMPT_DIRTRIM=2
 
 alias h=history
 alias cdv='cd "/mnt/goliath/projlib/Current Projects/Advanced Coding, Encoders and Mobile/Viper"'
 alias vi='vim' 
 alias svndiff="svn diff | grep ^[+-]"
 alias ssh='ssh -X'
-export VIPER_IP=172.17.118.60
-export JAVA_HOME=/usr/lib/jvm/java-6-sun/
 alias pgrep='pgrep -fl'
-alias ch='google-chrome &'
-alias chj='google-chrome hudson-satv.tandbergtv.lan &'
 alias  lt="ls -lrt"
 
 #todo.txt
@@ -115,6 +88,3 @@ alias td='toodledo'
 alias gcal='google calendar'
 
 PATH="$PATH:/home/eanwwie/.gem/ruby/1.9.1/bin"
-
-#For mapping CapsLock to escape
-xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
