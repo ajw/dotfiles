@@ -73,7 +73,7 @@ fi
 PROMPT_DIRTRIM=2
 
 alias h=history
-alias cdv='cd "/mnt/goliath/projlib/Current Projects/Advanced Coding, Encoders and Mobile/Viper"'
+alias cdv='cd "/home/eanwwie/projlib/Current Projects/Advanced Coding, Encoders and Mobile/Viper"'
 alias vi='vim' 
 alias svndiff="svn diff | grep ^[+-]"
 alias ssh='ssh -X'
