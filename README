@@ -6,6 +6,7 @@ Installation (Ubuntu):
 Create symlinks:
 
     ln -s ~/.dotfiles/bashrc ~/.bashrc
+    ln -s ~/.dotfiles/.git_config ~/.git_config
  
 Commit changes and push:
     git add <files>
