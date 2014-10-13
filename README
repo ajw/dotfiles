@@ -2,12 +2,10 @@ Installation (Ubuntu):
 
     git clone git://github.com/ajw/dotfiles.git ~/.dotfiles
 
+Setup
+	Use Ansible
+	ansible-playbook setup.yml ~/.dotfiles
 
-Create symlinks:
-
-    ln -s ~/.dotfiles/bashrc ~/.bashrc
-    ln -s ~/.dotfiles/gitconfig ~/.gitconfig
- 
 Commit changes and push:
     git add <files>
     git commit -m "comment"
