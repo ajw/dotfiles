@@ -5,5 +5,9 @@
   tasks:
   - name:  Create symbolic link  for .bashrc
     local_action: file src="{{ ansible_env['HOME'] }}/.dotfiles/bashrc" dest="{{ ansible_env['HOME'] }}/.bashrc" state=link
-  - name:  Create symbolic link gitconfig
+
+  - name:  Create symbolic link for gitconfig
     local_action: file src="{{ ansible_env['HOME'] }}/.dotfiles/gitconfig" dest="{{ ansible_env['HOME'] }}/.gitconfig" state=link
+
+  - name:  Switch git remote URLs from HTTPS to SSH
+    local_action: shell git remote set-url origin git@github.com:ajw/dotfiles.git chdir="~/.dotfiles"
