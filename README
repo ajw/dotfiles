@@ -3,8 +3,8 @@ Installation (Ubuntu):
     git clone git://github.com/ajw/dotfiles.git ~/.dotfiles
 
 Setup
-	Use Ansible
-	ansible-playbook setup.yml ~/.dotfiles
+    Use Ansible
+    ansible-playbook ~/.dotfiles/setup.yml
 
 Commit changes and push:
     git add <files>
@@ -13,4 +13,4 @@ Commit changes and push:
 
 Pull changes:
     git pull
-   
+
